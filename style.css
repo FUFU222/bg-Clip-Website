@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Philosopher', sans-serif;
+}
+
+body {
+    background: rgb(0,3,36);
+    background: linear-gradient(90deg, rgba(0,3,36,0.6727284663865547) 13%, rgba(9,37,80,0.6923363095238095) 48%, rgba(16,141,119,0.4094231442577031) 66%, rgba(255,196,0,0.5578825280112045) 91%);
+    overflow: hidden;
+}
+
+.clip-bg {
+    background-image: url(./\ images/bg.jpg);
+    height: 100vh;
+    clip-path: polygon(100% 0, 100% 69%, 0 100%, 0 28%);
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.clip-bg::after {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+    opacity: 0.4;
+}
+.clip-bg h1 {
+    z-index: 2;
+    font-size: 5rem;
+    color: #fff;
+}
+header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+img {
+    height: 15vh;
+    width: 15vw;
+    position: absolute;
+}
+ul {
+    margin-left: auto;
+    text-align: right;
+    display: flex;
+    font-size: 2rem;    
+    margin-left: 60vw;
+    z-index: 2;
+    list-style: none;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+@media(max-width:800px)
+{
+    html {
+        font-size: 50%;
+    }
+}
